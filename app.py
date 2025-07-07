@@ -78,19 +78,19 @@ class Me:
     def __init__(self):
         self.openai = OpenAI()
         self.name = "Izzham Burhan"
-        reader = PdfReader("../me/Profile.pdf")
+        reader = PdfReader("me/Profile.pdf")
         self.linkedin = ""
         for page in reader.pages:
             text = page.extract_text()
             if text:
                 self.linkedin += text
-        reader2 = PdfReader("../me/Muhammad Ariff Izzham - resume.pdf")
+        reader2 = PdfReader("me/Muhammad Ariff Izzham - resume.pdf")
         self.resume = ""
         for page in reader2.pages:
             text = page.extract_text()
             if text:
                 self.resume += text
-        with open("../me/summary.txt", "r", encoding="utf-8") as f:
+        with open("me/summary.txt", "r", encoding="utf-8") as f:
             self.summary = f.read()
 
 
