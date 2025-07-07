@@ -4,6 +4,7 @@ import json
 import os
 import requests
 from pypdf import PdfReader
+from pydantic import BaseModel
 import gradio as gr
 
 
@@ -137,4 +138,3 @@ If the user is engaging in discussion, try to steer them towards getting in touc
 if __name__ == "__main__":
     me = Me()
     gr.ChatInterface(me.chat, type="messages").launch()
-    
